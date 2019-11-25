@@ -1,12 +1,12 @@
 import java.sql.Date;
-
 /**
  * extends from Persona
  * adds start of treatment Date, end of treatment date, prescriptions medications[], contradictions medications[]
  */
 public class Paciente extends Persona{
-	private Date iniTratamiento;
-	private Date finTratamiento;
+	private String id;
+	Prescripcion medicamentos[]= new Prescripcion[5];
+	private String dx;
 	/**
 	 * Create a new Pacient initializing:
 	 * @param name of the person
@@ -16,24 +16,20 @@ public class Paciente extends Persona{
 	 * @param height of the person
 	 * @param dates of treatment
 	 */
-	public Paciente(String nombre, int edad, Date nacimiento, int peso, int altura, Date iniTratamiento, Date finTratamiento) {
-		super(nombre,edad,nacimiento, peso, altura);
-		this.iniTratamiento=iniTratamiento;
-		this.finTratamiento=finTratamiento;
+	public Paciente(String nombre, int edad, Date nacimiento, int peso, int altura, String id,
+			Prescripcion[] medicamentos) {
+		super(nombre, edad, nacimiento, peso, altura);
+		this.id = id;
+		this.medicamentos = medicamentos;
 	}
-	public Date getIniTratamiento() {
-		return iniTratamiento;
+	public String getId() {
+		return id;
 	}
-	public void setIniTratamiento(Date iniTratamiento) {
-		this.iniTratamiento = iniTratamiento;
+	public Prescripcion[] getMedicamentos() {
+		return medicamentos;
 	}
-	public Date getFinTratamiento() {
-		return finTratamiento;
+	public String getDx() {
+		return dx;
 	}
-	public void setFinTratamiento(Date finTratamiento) {
-		this.finTratamiento = finTratamiento;
-	}
-	
-	
 
 }
