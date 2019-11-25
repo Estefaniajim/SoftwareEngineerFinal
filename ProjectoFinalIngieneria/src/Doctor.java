@@ -19,14 +19,8 @@ public class Doctor extends Persona{
 	public int getDoctorID() {
 		return doctorID;
 	}
-	public void setDoctorID(int doctorID) {
-		this.doctorID = doctorID;
-	}
 	public boolean isPermiso() {
 		return permiso;
-	}
-	public void setPermiso(boolean permiso) {
-		this.permiso = permiso;
 	}
 	/**
 	 * mehtod that adds meds to the medications of pacient
