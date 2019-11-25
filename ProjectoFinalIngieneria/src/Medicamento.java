@@ -4,7 +4,7 @@
 public class Medicamento {
 	private String nombre;
 	private int dosis;
-	private String presentacion;
+	private boolean presentacion;
 	
 	/**
 	 * Create a new medication initializing:
@@ -12,7 +12,7 @@ public class Medicamento {
 	 * @param dosis of the med
 	 * @param type of med 
 	 */
-	public Medicamento(String nombre, int dosis, String presentacion) {
+	public Medicamento(String nombre, int dosis, boolean presentacion) {
 		this.nombre=nombre;
 		this.dosis=dosis;
 		this.presentacion=presentacion;
@@ -25,11 +25,6 @@ public class Medicamento {
 	public String getNombre() {
 		return nombre;
 	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
 	public int getDosis() {
 		return dosis;
 	}
@@ -38,13 +33,7 @@ public class Medicamento {
 		this.dosis = dosis;
 	}
 
-	public String getPresentacion() {
+	public boolean isPresentacion() {
 		return presentacion;
 	}
-
-	public void setPresentacion(String presentacion) {
-		this.presentacion = presentacion;
-	}
-	
-
 }
